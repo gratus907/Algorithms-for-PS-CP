@@ -1,5 +1,5 @@
-#include <stdio.h>
-#define lli long long int
+#include <bits/stdc++.h>
+using namespace std;
 
 int INF = (int)1e9;
 int dp[1000200];
