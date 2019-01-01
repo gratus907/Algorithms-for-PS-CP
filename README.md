@@ -1,14 +1,15 @@
 Algorithms for Problem Solving / Competitive Programming
 
-This Repository is to archive algorithms for Problem Solving/Competitive Programming. 
+This Repository is to archive algorithms for Problem Solving/Competitive Programming.
 
-All codes will be updated on my Naver blog, https://blog.naver.com/gratus907 in Korean.
+Some codes will be updated on my Naver blog, https://blog.naver.com/gratus907 in Korean.
 
-
+Codes without language specification is written in C++
 
 ## Dynamic Programming
 1. Longest Increasing Subsequence
 2. Largest Maximum Subarray
+3. Longest Common Subsequence (Python and C++)
 
 ## Graph Algorithms
 1. Breadth First Search
@@ -16,8 +17,8 @@ All codes will be updated on my Naver blog, https://blog.naver.com/gratus907 in 
 
 
 ## Mathematics
-
-
+1. Euler_phi function
+2. Sieve of Eratosthenes
 
 ## Data Structure
 
