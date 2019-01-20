@@ -19,7 +19,8 @@ Codes without language specification is written in C++
 ## Mathematics
 1. Euler_phi function
 2. Sieve of Eratosthenes
-
+3. Fast Modulo Exponentiation
+4. Modular Inverse
 ## Data Structure
 
 
