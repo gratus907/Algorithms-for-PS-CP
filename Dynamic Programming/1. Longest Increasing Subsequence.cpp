@@ -7,7 +7,7 @@ int lis_len;
 int position[1000003];
 int lis[1000003];
 int lis_pushed[1000003];
-int main()
+int main() 
 {
     int n;
     scanf("%d",&n);
