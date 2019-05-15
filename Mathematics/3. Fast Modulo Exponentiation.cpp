@@ -4,9 +4,9 @@ Runs on O(log y) time,
 calculate x^y mod p
 */
 
-lli modpow(lli x, lli y, lli p)
+ll modpow(ll x, ll y, ll p)
 {
-    lli res = 1;
+    ll res = 1;
     x = x % p;
     while (y > 0)
     {

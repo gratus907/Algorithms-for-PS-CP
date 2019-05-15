@@ -1,8 +1,8 @@
-#define long long int lli
-lli euler_phi(lli n)
+#define ll long long
+ll euler_phi(ll n)
 {
-    lli p=2;
-    lli ephi = n;
+    ll p=2;
+    ll ephi = n;
     while(p*p<=n)
     {
         if (n%p == 0)
