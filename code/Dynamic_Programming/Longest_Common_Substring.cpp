@@ -1,8 +1,5 @@
-// C++ version LCS
-/*
-input : two const char*
-output : their LCS, in c++ std::string type
-*/
+//input : two const char*
+//output : their LCS, in c++ std::string type
 string lcsf(const char *X,const char *Y)
 {
     int m = (int)strlen(X);

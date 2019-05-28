@@ -1,0 +1,196 @@
+\documentclass[landscape,8pt]{article}
+\linespread{1}
+\usepackage{inputenc}
+\usepackage{multicol}
+\setlength{\columnsep}{0.5cm}
+\setlength{\columnseprule}{0.25pt}
+\usepackage{amsmath}
+\usepackage{graphbox}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{subcaption}
+\usepackage{geometry}
+\geometry{a4paper, landscape, margin = 0.6in}
+\usepackage{enumerate}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{float}
+\usepackage{tabu}
+\usepackage{listings}
+\usepackage{wrapfig}
+\usepackage{authblk}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhead[R]{Little Piplup}
+\fancyhead[L]{Seoul National University}
+\usepackage[compact]{titlesec}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+\newcommand{\st}{\text{ such that }}
+\newcommand{\for}{\text{ for }}
+\newcommand{\newpara}[1]{\paragraph{#1} \mbox{}\\}
+\everymath{\displaystyle}
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}
+\setlength{\parindent}{0pt}
+\titlespacing{\section}{0pt}{*0}{*0}
+\titlespacing{\subsection}{0pt}{*1}{*0.5}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+\topsep=5pt \partopsep=5pt
+\title{\Huge{\textsf{Little Piplup}}}
+\author{Gratus907(Wonseok Shin), Coffeetea(Jinje Han), DhDroid(Donghyun Son)}
+\date{ }
+
+\begin{document}
+\maketitle
+\begin{multicols}{2}\raggedcolumns
+\tableofcontents
+\pagebreak
+
+\section{Settings}
+
+  \subsection{C++}
+
+\section{Data Structures}
+  \subsection{Segment Tree}
+     To deal with queries on intervals, we use segment tree.
+     \verbatiminput{./code/Data_Structures/Segtree_Make.cpp}
+     Updating segment Tree
+     \verbatiminput{./code/Data_Structures/Segtree_Update.cpp}
+     Answering queries via segment tree
+     \verbatiminput{./code/Data_Structures/Segtree_Answerquery.cpp}
+  \subsection{Fenwick Tree}
+\columnbreak
+  \section{Mathematics}
+  \subsection{Useful Mathematical Formula}
+    \begin{itemize}
+      \item Catalan Number : Number of valid parantheses strings with $n$ pairs
+      \[
+      C_n = \frac{1}{n+1}\binom{2n}{n}
+      \]
+    \end{itemize}
+  \subsection{Number of Integer Partition}
+    \verbatiminput{./code/Mathematics/Num_of_Integer_Partition.py}
+
+  \subsection{Extended Euclidean Algorithm}
+    \verbatiminput{./code/Mathematics/Extended_Euclidean_Algorithm.cpp}
+  \subsection{Fast Modulo Exponentiation}
+  Calculating \texttt{$x^y$ mod $p$} in $\order{\log y}$ time.
+    \verbatiminput{./code/Mathematics/Fast_Modulo_Exponentiation.cpp}
+
+  \subsection{Miller-Rabin Primality Testing}
+  Base values of $a$ chosen so that results are tested to be correct up to $10^14$.
+  \verbatiminput{./code/Mathematics/Miller_Rabin_Test.cpp}
+
+  \subsection{Pollard-Rho Factorization}
+  \verbatiminput{./code/Mathematics/Pollard_Rho_Algorithm.cpp}
+  \subsection{Euler Totient}
+  Calculating number of integers below $n$ which is coprime with $n$.
+    \verbatiminput{./code/Mathematics/Euler_Phi_Function.cpp}
+
+  \subsection{Modular Multiplicative Inverse}
+    \verbatiminput{./code/Mathematics/Modular_Inverse.cpp}
+
+\columnbreak
+\section{Geometry}
+  \subsection{Closest Pair Problem}
+
+  \subsection{Smallest Enclosing Circle}
+
+  \subsection{Convex Hull}
+\columnbreak
+\section{Graphs}
+  \subsection{Topological Sorting}
+  Topological sorting with dfs
+    \verbatiminput{./code/Graph/Topological_Sort.cpp}
+
+  \subsection{Dijkstra}
+  $\order{E \log V}$ Single-Start-Shortest-Path.\\
+  Not working for graph with minus weight.
+    \verbatiminput{./code/Graph/Dijkstra_Algorithm.cpp}
+
+  \subsection{Bellman Ford}
+  $\order{EV}$ Single-Start-Shortest-Path.\\
+  Not working for graph with minus cycle $\rightarrow$ must detect.
+    \verbatiminput{./code/Graph/Bellman_Ford_Algorithm.cpp}
+
+  \subsection{Floyd-Warshall}
+  Works on adjacency matrix, in $\order{V^3}$.
+  \verbatiminput{./code/Graph/Floyd_Warshall_Algorithm.cpp}
+
+  \subsection{Bipartite Checking}
+  \verbatiminput{./code/Graph/Bipartite_Checking.cpp}
+  \subsection{MST Kruskal Algorithm}
+
+  \subsection{MST Prim Algorithm}
+
+  \subsection{Ford-Fulkerson Algorithm}
+\columnbreak
+\section{Dynamic}
+  \subsection{Largest Sum Subarray}
+  Computes sum of largest sum subarray in $\order{N}$
+  \verbatiminput{./code/Dynamic_Programming/Largest_Maximum_Subarray.cpp}
+
+  \subsection{Knapsack}
+
+  \subsection{Longest Common Subsequence}
+    \verbatiminput{./code/Dynamic_Programming/Longest_Common_Substring.cpp}
+  \subsection{Edit Distance}
+
+\section{String}
+  \subsection{KMP Algorithm}
+
+  \subsection{Manacher's Algorithm}
+
+  \subsection{Trie}
+
+  \subsection{Rabin-Karp Hashing}
+
+  \subsection{Aho-Corasick Algorithm}
+\columnbreak
+\section{Miscellaneous}
+  \subsection{Useful Bitwise Functions in C++}
+  \begin{verbatim}
+    int __builtin_clz(int x);// number of leading zero
+    int __builtin_ctz(int x);// number of trailing zero
+    int __builtin_clzll(ll x);// number of leading zero
+    int __builtin_ctzll(ll x);// number of trailing zero
+    int __builtin_popcount(int x);// number of 1-bits in x
+    int __builtin_popcountll(ll x);// number of 1-bits in x
+
+    lsb(n): (n & -n); // last bit (smallest)
+    floor(log2(n)): 31 - __builtin_clz(n | 1);
+    floor(log2(n)): 63 - __builtin_clzll(n | 1);
+
+    // compute next perm. ex) 00111, 01011, 01101, 01110, 10011, 10101..
+    ll next_perm(ll v)
+    {
+      ll t = v | (v-1);
+      return (t + 1) | (((~t & -~t) - 1) >> (__builtin_ctz(v) + 1));
+    }
+  \end{verbatim}
+  \columnbreak
+  \subsection{List of Useful Numbers}
+  \begin{verbatim}
+
+    < 10^k    prime   # of prime          < 10^k            prime
+    -------------------------------------------------------------
+    1             7            4          10           9999999967
+    2            97           25          11          99999999977
+    3           997          168          12         999999999989
+    4          9973         1229          13        9999999999971
+    5         99991         9592          14       99999999999973
+    6        999983        78498          15      999999999999989
+    7       9999991       664579          16     9999999999999937
+    8      99999989      5761455          17    99999999999999997
+    9     999999937     50847534          18   999999999999999989
+  \end{verbatim}
+\columnbreak
+\section{Debugging Checkpoints}
+\end{multicols}
+\end{document}

@@ -1,8 +1,3 @@
-/*
-Topological Sorting using depth-first search.
-Prints one arbitrary valid answer if there are many.
-*/
-
 vector <int> graph[V];
 bool visited[V];
 vector <int> sorted;

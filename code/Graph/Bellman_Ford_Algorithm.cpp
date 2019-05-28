@@ -1,4 +1,3 @@
-const int INF = 987654321;
 struct Edge
 {
     int u, v, w;
@@ -6,7 +5,7 @@ struct Edge
 
 vector <Edge> edgelist;
 int V, E;
-int dist[502];
+int dist[V+1];
 
 bool relax_all_edge()
 {
@@ -25,7 +24,7 @@ bool relax_all_edge()
 
 int bellman_ford()
 {
-    fill(dist,dist+502,INF);
+    fill(dist,dist+V+2,INF);
     dist[1] = 0;
     for (int i = 0; i<V-1; i++)
     {
