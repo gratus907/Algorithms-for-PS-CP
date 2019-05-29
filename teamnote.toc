@@ -3,6 +3,7 @@
 \contentsline {section}{\numberline {2}Data Structures}{2}% 
 \contentsline {subsection}{\numberline {2.1}Segment Tree}{2}% 
 \contentsline {subsection}{\numberline {2.2}Fenwick Tree}{2}% 
+\contentsline {subsection}{\numberline {2.3}Disjoint Set Union}{2}% 
 \contentsline {section}{\numberline {3}Mathematics}{3}% 
 \contentsline {subsection}{\numberline {3.1}Useful Mathematical Formula}{3}% 
 \contentsline {subsection}{\numberline {3.2}Number of Integer Partition}{3}% 
@@ -16,6 +17,7 @@
 \contentsline {subsection}{\numberline {4.1}Closest Pair Problem}{5}% 
 \contentsline {subsection}{\numberline {4.2}Smallest Enclosing Circle}{5}% 
 \contentsline {subsection}{\numberline {4.3}Convex Hull}{5}% 
+\contentsline {subsection}{\numberline {4.4}Intersection of Line Segment}{5}% 
 \contentsline {section}{\numberline {5}Graphs}{5}% 
 \contentsline {subsection}{\numberline {5.1}Topological Sorting}{5}% 
 \contentsline {subsection}{\numberline {5.2}Dijkstra}{5}% 
@@ -24,7 +26,8 @@
 \contentsline {subsection}{\numberline {5.5}Bipartite Checking}{7}% 
 \contentsline {subsection}{\numberline {5.6}MST Kruskal Algorithm}{7}% 
 \contentsline {subsection}{\numberline {5.7}MST Prim Algorithm}{7}% 
-\contentsline {subsection}{\numberline {5.8}Ford-Fulkerson Algorithm}{7}% 
+\contentsline {subsection}{\numberline {5.8}Strongly Connected Component}{7}% 
+\contentsline {subsection}{\numberline {5.9}Ford-Fulkerson Algorithm}{7}% 
 \contentsline {section}{\numberline {6}Dynamic}{8}% 
 \contentsline {subsection}{\numberline {6.1}Largest Sum Subarray}{8}% 
 \contentsline {subsection}{\numberline {6.2}Knapsack}{8}% 
