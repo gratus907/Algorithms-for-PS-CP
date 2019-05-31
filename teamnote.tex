@@ -65,6 +65,7 @@
      Answering queries via segment tree
      \verbatiminput{./code/Data_Structures/Segtree_Answerquery.cpp}
   \subsection{Fenwick Tree}
+  \subsection{Disjoint Set Union}
 \columnbreak
   \section{Mathematics}
   \subsection{Useful Mathematical Formula}
@@ -98,6 +99,8 @@
 
 \columnbreak
 \section{Geometry}
+  \subsection{CCW}
+    \verbatiminput{./code/Geometry/CCW.cpp}
   \subsection{Closest Pair Problem}
 
   \subsection{Smallest Enclosing Circle}
@@ -109,32 +112,40 @@
   Topological sorting with dfs
     \verbatiminput{./code/Graph/Topological_Sort.cpp}
 
-  \subsection{Dijkstra}
-  $\order{E \log V}$ Single-Start-Shortest-Path.\\
-  Not working for graph with minus weight.
-    \verbatiminput{./code/Graph/Dijkstra_Algorithm.cpp}
 
-  \subsection{Bellman Ford}
-  $\order{EV}$ Single-Start-Shortest-Path.\\
-  Not working for graph with minus cycle $\rightarrow$ must detect.
-    \verbatiminput{./code/Graph/Bellman_Ford_Algorithm.cpp}
-
-  \subsection{Floyd-Warshall}
-  Works on adjacency matrix, in $\order{V^3}$.
-  \verbatiminput{./code/Graph/Floyd_Warshall_Algorithm.cpp}
 
   \subsection{Bipartite Checking}
-  \verbatiminput{./code/Graph/Bipartite_Checking.cpp}
+    \verbatiminput{./code/Graph/Bipartite_Checking.cpp}
+
+  \subsection{Union-Find}
+    \verbatiminput{./code/Graph/Union_Find.cpp}
   \subsection{MST Kruskal Algorithm}
+    \verbatiminput{./code/Graph/Kruskal_MST.cpp}
 
   \subsection{MST Prim Algorithm}
-
+    \verbatiminput{./code/Graph/Prim_MST.cpp}
   \subsection{Ford-Fulkerson Algorithm}
 \columnbreak
+
+\section{Shortest Path}
+  \subsection{Dijkstra}
+    $\order{E \log V}$ Single-Start-Shortest-Path.\\
+    Not working for graph with minus weight.
+      \verbatiminput{./code/Graph/Dijkstra_Algorithm.cpp}
+
+  \subsection{Bellman Ford}
+    $\order{EV}$ Single-Start-Shortest-Path.\\
+    Not working for graph with minus cycle $\rightarrow$ must detect.
+      \verbatiminput{./code/Graph/Bellman_Ford_Algorithm.cpp}
+
+  \subsection{Floyd-Warshall}
+    Works on adjacency matrix, in $\order{V^3}$.
+      \verbatiminput{./code/Graph/Floyd_Warshall_Algorithm.cpp}
+
 \section{Dynamic}
   \subsection{Largest Sum Subarray}
   Computes sum of largest sum subarray in $\order{N}$
-  \verbatiminput{./code/Dynamic_Programming/Largest_Maximum_Subarray.cpp}
+    \verbatiminput{./code/Dynamic_Programming/Largest_Maximum_Subarray.cpp}
 
   \subsection{Knapsack}
 
@@ -153,6 +164,7 @@
 
   \subsection{Aho-Corasick Algorithm}
 \columnbreak
+
 \section{Miscellaneous}
   \subsection{Useful Bitwise Functions in C++}
   \begin{verbatim}
@@ -191,6 +203,7 @@
     9     999999937     50847534          18   999999999999999989
   \end{verbatim}
 \columnbreak
+
 \section{Debugging Checkpoints}
 \end{multicols}
 \end{document}
