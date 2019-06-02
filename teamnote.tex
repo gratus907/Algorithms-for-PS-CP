@@ -65,14 +65,16 @@
      Answering queries via segment tree
      \verbatiminput{./code/Data_Structures/Segtree_Answerquery.cpp}
   \subsection{Fenwick Tree}
-  \subsection{Disjoint Set Union}
+  \subsection{Disjoint Set Union (Union - Find)}
+      \verbatiminput{./code/Graph/Union_Find.cpp}
+
 \columnbreak
   \section{Mathematics}
   \subsection{Useful Mathematical Formula}
     \begin{itemize}
       \item Catalan Number : Number of valid parantheses strings with $n$ pairs
       \[
-      C_n = \frac{1}{n+1}\binom{2n}{n}
+        C_n = \frac{1}{n+1}\binom{2n}{n}
       \]
     \end{itemize}
   \subsection{Number of Integer Partition}
@@ -98,15 +100,19 @@
   \subsection{Modular Multiplicative Inverse}
     \verbatiminput{./code/Mathematics/Modular_Inverse.cpp}
 
+  \subsection{Fast Fourier Transform}
 \columnbreak
 \section{Geometry}
   \subsection{CCW}
     \verbatiminput{./code/Geometry/CCW.cpp}
+  \subsection{Point in polygon}
+    Returns boolean, if point is in the polygon (represented as vector of points).
+    \verbatiminput{./code/Geometry/Point_in_polygon.cpp}
   \subsection{Closest Pair Problem}
 
   \subsection{Smallest Enclosing Circle}
 
-  \subsection{Convex Hull}
+  \subsection{Convex Hull (Graham Scan)}
 
   \subsection{Intersection of Line Segment}
 
@@ -116,20 +122,17 @@
   Topological sorting with dfs
     \verbatiminput{./code/Graph/Topological_Sort.cpp}
 
-
-
   \subsection{Bipartite Checking}
     \verbatiminput{./code/Graph/Bipartite_Checking.cpp}
 
-  \subsection{Union-Find}
-    \verbatiminput{./code/Graph/Union_Find.cpp}
   \subsection{MST Kruskal Algorithm}
     \verbatiminput{./code/Graph/Kruskal_MST.cpp}
 
   \subsection{MST Prim Algorithm}
-<<<<<<< HEAD
+
     \verbatiminput{./code/Graph/Prim_MST.cpp}
   \subsection{Ford-Fulkerson Algorithm}
+
 \columnbreak
 
 \section{Shortest Path}
@@ -147,23 +150,21 @@
     Works on adjacency matrix, in $\order{V^3}$.
       \verbatiminput{./code/Graph/Floyd_Warshall_Algorithm.cpp}
 
-=======
-
-  \subsection{Strongly Connected Component}
-
-  \subsection{Ford-Fulkerson Algorithm}
 \columnbreak
 
->>>>>>> master
 \section{Dynamic}
+  \subsection{Longest Increasing Subsequence}
+    Find LIS in $\order{n \log n}$ time.
+
   \subsection{Largest Sum Subarray}
-  Computes sum of largest sum subarray in $\order{N}$
-    \verbatiminput{./code/Dynamic_Programming/Largest_Maximum_Subarray.cpp}
+    Computes sum of largest sum subarray in $\order{N}$
+      \verbatiminput{./code/Dynamic_Programming/Largest_Maximum_Subarray.cpp}
 
   \subsection{Knapsack}
 
   \subsection{Longest Common Subsequence}
     \verbatiminput{./code/Dynamic_Programming/Longest_Common_Substring.cpp}
+
   \subsection{Edit Distance}
 
 \section{String}

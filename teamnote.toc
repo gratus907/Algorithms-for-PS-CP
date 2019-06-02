@@ -3,7 +3,7 @@
 \contentsline {section}{\numberline {2}Data Structures}{2}% 
 \contentsline {subsection}{\numberline {2.1}Segment Tree}{2}% 
 \contentsline {subsection}{\numberline {2.2}Fenwick Tree}{2}% 
-\contentsline {subsection}{\numberline {2.3}Disjoint Set Union}{2}% 
+\contentsline {subsection}{\numberline {2.3}Disjoint Set Union (Union - Find)}{2}% 
 \contentsline {section}{\numberline {3}Mathematics}{3}% 
 \contentsline {subsection}{\numberline {3.1}Useful Mathematical Formula}{3}% 
 \contentsline {subsection}{\numberline {3.2}Number of Integer Partition}{3}% 
@@ -13,30 +13,30 @@
 \contentsline {subsection}{\numberline {3.6}Pollard-Rho Factorization}{4}% 
 \contentsline {subsection}{\numberline {3.7}Euler Totient}{4}% 
 \contentsline {subsection}{\numberline {3.8}Modular Multiplicative Inverse}{4}% 
+\contentsline {subsection}{\numberline {3.9}Fast Fourier Transform}{4}% 
 \contentsline {section}{\numberline {4}Geometry}{5}% 
 \contentsline {subsection}{\numberline {4.1}CCW}{5}% 
-\contentsline {subsection}{\numberline {4.2}Closest Pair Problem}{5}% 
-\contentsline {subsection}{\numberline {4.3}Smallest Enclosing Circle}{5}% 
-\contentsline {subsection}{\numberline {4.4}Convex Hull}{5}% 
-\contentsline {subsection}{\numberline {4.5}Intersection of Line Segment}{5}% 
-\contentsline {section}{\numberline {5}Graphs}{5}% 
-\contentsline {subsection}{\numberline {5.1}Topological Sorting}{5}% 
-\contentsline {subsection}{\numberline {5.2}Bipartite Checking}{5}% 
-\contentsline {subsection}{\numberline {5.3}Union-Find}{6}% 
-\contentsline {subsection}{\numberline {5.4}MST Kruskal Algorithm}{6}% 
-\contentsline {subsection}{\numberline {5.5}MST Prim Algorithm}{6}% 
-\contentsline {subsection}{\numberline {5.6}Ford-Fulkerson Algorithm}{7}% 
+\contentsline {subsection}{\numberline {4.2}Point in polygon}{5}% 
+\contentsline {subsection}{\numberline {4.3}Closest Pair Problem}{5}% 
+\contentsline {subsection}{\numberline {4.4}Smallest Enclosing Circle}{5}% 
+\contentsline {subsection}{\numberline {4.5}Convex Hull (Graham Scan)}{5}% 
+\contentsline {subsection}{\numberline {4.6}Intersection of Line Segment}{5}% 
+\contentsline {section}{\numberline {5}Graphs}{6}% 
+\contentsline {subsection}{\numberline {5.1}Topological Sorting}{6}% 
+\contentsline {subsection}{\numberline {5.2}Bipartite Checking}{6}% 
+\contentsline {subsection}{\numberline {5.3}MST Kruskal Algorithm}{6}% 
+\contentsline {subsection}{\numberline {5.4}MST Prim Algorithm}{7}% 
+\contentsline {subsection}{\numberline {5.5}Ford-Fulkerson Algorithm}{7}% 
 \contentsline {section}{\numberline {6}Shortest Path}{7}% 
 \contentsline {subsection}{\numberline {6.1}Dijkstra}{7}% 
 \contentsline {subsection}{\numberline {6.2}Bellman Ford}{8}% 
 \contentsline {subsection}{\numberline {6.3}Floyd-Warshall}{8}% 
-\contentsline {subsection}{\numberline {6.4}Strongly Connected Component}{8}% 
-\contentsline {subsection}{\numberline {6.5}Ford-Fulkerson Algorithm}{8}% 
 \contentsline {section}{\numberline {7}Dynamic}{9}% 
-\contentsline {subsection}{\numberline {7.1}Largest Sum Subarray}{9}% 
-\contentsline {subsection}{\numberline {7.2}Knapsack}{9}% 
-\contentsline {subsection}{\numberline {7.3}Longest Common Subsequence}{9}% 
-\contentsline {subsection}{\numberline {7.4}Edit Distance}{9}% 
+\contentsline {subsection}{\numberline {7.1}Longest Increasing Subsequence}{9}% 
+\contentsline {subsection}{\numberline {7.2}Largest Sum Subarray}{9}% 
+\contentsline {subsection}{\numberline {7.3}Knapsack}{9}% 
+\contentsline {subsection}{\numberline {7.4}Longest Common Subsequence}{9}% 
+\contentsline {subsection}{\numberline {7.5}Edit Distance}{9}% 
 \contentsline {section}{\numberline {8}String}{9}% 
 \contentsline {subsection}{\numberline {8.1}KMP Algorithm}{9}% 
 \contentsline {subsection}{\numberline {8.2}Manacher's Algorithm}{9}% 
