@@ -1,5 +1,4 @@
-//Based on Union-Find implementation
-//O(E log E) if path-compressed Union Find.
+
 int Kruskal()
 {
     int mstlen = 0;

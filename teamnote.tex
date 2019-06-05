@@ -60,10 +60,11 @@
   \subsection{Segment Tree}
      To deal with queries on intervals, we use segment tree.
      \verbatiminput{./code/Data_Structures/Segtree_Make.cpp}
-     Updating segment Tree
+     Updating segment tree
      \verbatiminput{./code/Data_Structures/Segtree_Update.cpp}
-     Answering queries via segment tree
+     Answering queries with segment tree
      \verbatiminput{./code/Data_Structures/Segtree_Answerquery.cpp}
+     Answering range minimum queries with segment tree
   \subsection{Fenwick Tree}
   \subsection{Disjoint Set Union (Union - Find)}
       \verbatiminput{./code/Graph/Union_Find.cpp}
@@ -80,6 +81,8 @@
   \subsection{Number of Integer Partition}
     \verbatiminput{./code/Mathematics/Num_of_Integer_Partition.py}
 
+  \subsection{Binomial Coefficient}
+    Fast-to-Type Binomial coefficient
   \subsection{Extended Euclidean Algorithm}
     \verbatiminput{./code/Mathematics/Extended_Euclidean_Algorithm.cpp}
   \subsection{Fast Modulo Exponentiation}
@@ -126,13 +129,22 @@
     \verbatiminput{./code/Graph/Bipartite_Checking.cpp}
 
   \subsection{MST Kruskal Algorithm}
+  Based on Union-Find implementation\\
+  $\order{E \log E}$ if path-compressed Union Find.
     \verbatiminput{./code/Graph/Kruskal_MST.cpp}
 
   \subsection{MST Prim Algorithm}
-
     \verbatiminput{./code/Graph/Prim_MST.cpp}
+
+  \subsection{MST Borvuka Algorithm}
+
   \subsection{Ford-Fulkerson Algorithm}
 
+  \subsection{Dinic's Algorithm}
+
+  \subsection{Heavy-Light Decomposition}
+
+  \subsection{Centroid Decomposition}
 \columnbreak
 
 \section{Shortest Path}
@@ -145,6 +157,8 @@
     $\order{EV}$ Single-Start-Shortest-Path.\\
     Not working for graph with minus cycle $\rightarrow$ must detect.
       \verbatiminput{./code/Graph/Bellman_Ford_Algorithm.cpp}
+  \subsection{SPFA Algorithm}
+    Average $\order{E}$, worst $\order{VE}$ time. Average-case improvement of Bellman Ford by using an additional queue.
 
   \subsection{Floyd-Warshall}
     Works on adjacency matrix, in $\order{V^3}$.
@@ -155,6 +169,7 @@
 \section{Dynamic}
   \subsection{Longest Increasing Subsequence}
     Find LIS in $\order{n \log n}$ time.
+      \verbatiminput{./code/Dynamic_Programming/Longest_Increasing_Subsequence.cpp}
 
   \subsection{Largest Sum Subarray}
     Computes sum of largest sum subarray in $\order{N}$
@@ -166,6 +181,7 @@
     \verbatiminput{./code/Dynamic_Programming/Longest_Common_Substring.cpp}
 
   \subsection{Edit Distance}
+
 
 \section{String}
   \subsection{KMP Algorithm}
