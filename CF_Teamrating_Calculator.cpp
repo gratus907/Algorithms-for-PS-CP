@@ -30,11 +30,15 @@ long double aggregateRatings(vector<long double> teamRatings)
 
 int main()
 {
-    long double a, b, c;
-    cin >> a >> b >> c;
-    vector <long double> tr;
-    tr.push_back(a);
-    tr.push_back(b);
-    tr.push_back(c);
-    cout << aggregateRatings(tr);
+    
+    while(true)
+    {
+        long double a, b, c;
+        cin >> a >> b >> c;
+        vector <long double> tr;
+        tr.push_back(a);
+        tr.push_back(b);
+        tr.push_back(c);
+        cout << aggregateRatings(tr) << endl;
+    }
 }
