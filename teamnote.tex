@@ -48,9 +48,12 @@
 
 \begin{document}
 \maketitle
-\begin{multicols}{2}\raggedcolumns
+\begin{multicols}{3}\raggedcolumns
 \tableofcontents
+\end{multicols}
 \pagebreak
+\begin{multicols}{2}\raggedcolumns
+
 
 \section{Settings}
 
@@ -70,7 +73,7 @@
       \verbatiminput{./code/Graph/Union_Find.cpp}
 
 \columnbreak
-  \section{Mathematics}
+\section{Mathematics}
   \subsection{Useful Mathematical Formula}
     \begin{itemize}
       \item Catalan Number : Number of valid parantheses strings with $n$ pairs
@@ -103,11 +106,14 @@
   \subsection{Modular Multiplicative Inverse}
     \verbatiminput{./code/Mathematics/Modular_Inverse.cpp}
 
+  \subsection{Kitamasa method}
+
   \subsection{Fast Fourier Transform}
 \columnbreak
 \section{Geometry}
   \subsection{CCW}
     \verbatiminput{./code/Geometry/CCW.cpp}
+
   \subsection{Point in polygon}
     Returns boolean, if point is in the polygon (represented as vector of points).
     \verbatiminput{./code/Geometry/Point_in_polygon.cpp}
@@ -145,6 +151,9 @@
   \subsection{Heavy-Light Decomposition}
 
   \subsection{Centroid Decomposition}
+
+  \subsection{Hungarian Algorithm}
+    $\order{n^3}$ assignment problem
 \columnbreak
 
 \section{Shortest Path}
@@ -182,6 +191,9 @@
 
   \subsection{Edit Distance}
 
+  \subsection{Convex Hull Trick}
+  \subsection{Divide and Conquer Optimization}
+  \subsection{Knuth Optimization}
 
 \section{String}
   \subsection{KMP Algorithm}
@@ -233,6 +245,7 @@
     9     999999937     50847534          18   999999999999999989
   \end{verbatim}
 \columnbreak
+
 
 \section{Debugging Checkpoints}
 \end{multicols}
