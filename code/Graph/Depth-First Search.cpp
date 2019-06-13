@@ -1,6 +1,4 @@
-/*
-Works on adjacent list (array-of-vector).
-*/
+//Works on adjacent list (array-of-vector).
 vector <int> graph[V];
 void dfs(int root)
 {
