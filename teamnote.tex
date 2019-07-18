@@ -68,6 +68,7 @@
      Answering queries with segment tree
      \verbatiminput{./code/Data_Structures/Segtree_Answerquery.cpp}
      Answering range minimum queries with segment tree
+     \verbatiminput{./code/Data_Structures/Range_Minimum_Query.cpp}
   \subsection{Fenwick Tree}
   \subsection{Disjoint Set Union (Union - Find)}
       \verbatiminput{./code/Data_Structures/Disjoint_Set_Union.cpp}
@@ -86,8 +87,10 @@
 
   \subsection{Binomial Coefficient}
     Fast-to-Type Binomial coefficient
+
   \subsection{Extended Euclidean Algorithm}
     \verbatiminput{./code/Mathematics/Extended_Euclidean_Algorithm.cpp}
+
   \subsection{Fast Modulo Exponentiation}
   Calculating \texttt{$x^y$ mod $p$} in $\order{\log y}$ time.
     \verbatiminput{./code/Mathematics/Fast_Modulo_Exponentiation.cpp}
@@ -117,6 +120,7 @@
   \subsection{Point in polygon}
     Returns boolean, if point is in the polygon (represented as vector of points).
     \verbatiminput{./code/Geometry/Point_in_polygon.cpp}
+
   \subsection{Closest Pair Problem}
 
   \subsection{Smallest Enclosing Circle}
@@ -144,10 +148,8 @@
 
   \subsection{MST Borvuka Algorithm}
 
-  \subsection{Ford-Fulkerson Algorithm}
-
   \subsection{Dinic's Algorithm}
-
+    \verbatiminput{./code/Graph/Dinic.cpp}
   \subsection{Heavy-Light Decomposition}
 
   \subsection{Centroid Decomposition}
@@ -166,6 +168,7 @@
     $\order{EV}$ Single-Start-Shortest-Path.\\
     Not working for graph with minus cycle $\rightarrow$ must detect.
       \verbatiminput{./code/Graph/Bellman_Ford_Algorithm.cpp}
+
   \subsection{SPFA Algorithm}
     Average $\order{E}$, worst $\order{VE}$ time. Average-case improvement of Bellman Ford by using an additional queue.
 
@@ -184,8 +187,8 @@
     Computes sum of largest sum subarray in $\order{N}$
       \verbatiminput{./code/Dynamic_Programming/Largest_Maximum_Subarray.cpp}
 
-  \subsection{Knapsack}
-
+  \subsection{0-1 Knapsack}
+    \verbatiminput{./code/Dynamic_Programming/0-1_Knapsack.cpp}
   \subsection{Longest Common Subsequence}
     \verbatiminput{./code/Dynamic_Programming/Longest_Common_Substring.cpp}
 
@@ -201,7 +204,7 @@
   \subsection{Manacher's Algorithm}
 
   \subsection{Trie}
-
+    \verbatiminput{./code/String/Trie.cpp}
   \subsection{Rabin-Karp Hashing}
 
   \subsection{Aho-Corasick Algorithm}
@@ -248,5 +251,11 @@
 
 
 \section{Debugging Checkpoints}
+\begin{itemize}
+  \item $10^5 * 10^5 \Rightarrow \text{INTEGER OVERFLOW}$.
+  \item If unsure with overflow, use \\
+  \texttt{\#define int long long} and stop caring.
+
+\end{itemize}
 \end{multicols}
 \end{document}
