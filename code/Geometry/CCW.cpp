@@ -3,7 +3,7 @@
 int CCW(Point a, Point b, Point c)
 {
     int op = a.x*b.y + b.x*c.y + c.x*a.y;
-    op -= (a.y*b.x + b.y*c.x + c.y*a.s);
+    op -= (a.y*b.x + b.y*c.x + c.y*a.x);
     if (op > 0)
         return 1;
     else if (op == 0)
