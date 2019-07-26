@@ -1,6 +1,5 @@
 \documentclass[landscape,8pt]{article}
 \linespread{1}
-\usepackage{inputenc}
 \usepackage{multicol}
 \setlength{\columnsep}{0.5cm}
 \setlength{\columnseprule}{0.25pt}
@@ -16,6 +15,7 @@
 \usepackage{amsthm}
 \usepackage{physics}
 \usepackage{float}
+\usepackage{kotex}
 \usepackage{tabu}
 \usepackage{listings}
 \usepackage{wrapfig}
@@ -47,6 +47,38 @@
 \date{ }
 
 \begin{document}
+{
+  \setlength{\columnseprule}{0pt}
+  \begin{multicols}{3}\raggedcolumns
+  \vspace*{\fill}
+  \begin{figure}[H]
+  \includegraphics[width=\linewidth]{piplup}
+  \end{figure}
+  \vspace*{\fill}
+  \columnbreak
+  \begin{center}
+  \vspace*{\fill}
+  \huge{\textbf{Little Piplup}\\}
+  \vspace{2em}
+    \LARGE{Contest Teamnote \\}
+   \large{UCPC 2019 ver}
+  \vspace*{\fill}
+  \end{center}
+  \columnbreak
+
+  \vspace*{\fill}
+  \begin{figure}[H]
+  \includegraphics[width=\linewidth]{revplup}
+  \end{figure}
+
+  \vspace*{\fill}
+  \end{multicols}
+}
+
+
+
+
+\newpage
 \maketitle
 \begin{multicols}{3}\raggedcolumns
 \tableofcontents
@@ -69,7 +101,8 @@
      \verbatiminput{./code/Data_Structures/Segtree_Answerquery.cpp}
      Answering range minimum queries with segment tree
      \verbatiminput{./code/Data_Structures/Range_Minimum_Query.cpp}
-  \subsection{Fenwick Tree}
+    \columnbreak
+  %\subsection{Fenwick Tree}
   \subsection{Disjoint Set Union (Union - Find)}
       \verbatiminput{./code/Data_Structures/Disjoint_Set_Union.cpp}
 
@@ -110,9 +143,10 @@
   \subsection{Modular Multiplicative Inverse}
     \verbatiminput{./code/Mathematics/Modular_Inverse.cpp}
 
-  \subsection{Kitamasa method}
+  %\subsection{Kitamasa method}
 
-  \subsection{Fast Fourier Transform}
+  %\subsection{Fast Fourier Transform}
+  \columnbreak
 \columnbreak
 \section{Geometry}
   \subsection{CCW}
@@ -123,9 +157,11 @@
     \verbatiminput{./code/Geometry/Point_in_polygon.cpp}
 
   \subsection{Closest Pair Problem}
-
+    Requires : Points must be sorted with x-axis.\\
+    Runs in $\mathcal{O}(n \log^2 n)$
+    \verbatiminput{./code/Geometry/Closest_pair.cpp}
   \subsection{Convex Hull (Graham Scan)}
-
+    \verbatiminput{./code/Geometry/Graham_Scan.cpp}
   \subsection{Intersection of Line Segment}
     \verbatiminput{./code/Geometry/Line_Segment_Intersection.cpp}
 \columnbreak
@@ -146,16 +182,16 @@
   \subsection{MST Prim Algorithm}
     \verbatiminput{./code/Graph/Prim_MST.cpp}
 
-  \subsection{MST Borvuka Algorithm}
+  %\subsection{MST Borvuka Algorithm}
 
   \subsection{Dinic's Algorithm}
     \verbatiminput{./code/Graph/Dinic.cpp}
-  \subsection{Heavy-Light Decomposition}
+  %\subsection{Heavy-Light Decomposition}
 
-  \subsection{Centroid Decomposition}
+  %\subsection{Centroid Decomposition}
 
-  \subsection{Hungarian Algorithm}
-    $\order{n^3}$ assignment problem
+  %\subsection{Hungarian Algorithm}
+    %$\order{n^3}$ assignment problem
 \columnbreak
 
 \section{Shortest Path}
@@ -170,7 +206,7 @@
       \verbatiminput{./code/Graph/Bellman_Ford_Algorithm.cpp}
 
   \subsection{SPFA Algorithm}
-    Average $\order{E}$, worst $\order{VE}$ time. Average-case improvement of Bellman Ford by using an additional queue.
+    Average $\order{E}$, worst $\order{VE}$ time. Average-case improvement of Bellman Ford by using an additional queue. $\rightarrow$ 데이터를 누가 짰을지를 생각해 보면 그냥 이런거 집어치우는게 맞을듯. ICPC Preliminary에서나 쓰자.
 
   \subsection{Floyd-Warshall}
     Works on adjacency matrix, in $\order{V^3}$.
@@ -192,13 +228,13 @@
   \subsection{Longest Common Subsequence}
     \verbatiminput{./code/Dynamic_Programming/Longest_Common_Substring.cpp}
 
-  \subsection{Edit Distance}
+  %\subsection{Edit Distance}
 
-  \subsection{Convex Hull Trick}
+  %\subsection{Convex Hull Trick}
 
-  \subsection{Divide and Conquer Optimization}
+  %\subsection{Divide and Conquer Optimization}
 
-  \subsection{Knuth Optimization}
+  %\subsection{Knuth Optimization}
 
 \section{String}
   \subsection{KMP Algorithm}
@@ -208,9 +244,9 @@
   \subsection{Trie}
     \verbatiminput{./code/String/Trie.cpp}
 
-  \subsection{Rabin-Karp Hashing}
+  %\subsection{Rabin-Karp Hashing}
 
-  \subsection{Aho-Corasick Algorithm}
+  %\subsection{Aho-Corasick Algorithm}
 \columnbreak
 
 \section{Miscellaneous}
@@ -234,7 +270,6 @@
       return (t + 1) | (((~t & -~t) - 1) >> (__builtin_ctz(v) + 1));
     }
   \end{verbatim}
-  \columnbreak
   \subsection{List of Useful Numbers}
   \begin{verbatim}
 
@@ -253,12 +288,29 @@
 \columnbreak
 
 
-\section{Debugging Checkpoints}
+\section{Checkpoints}
+  \subsection{Debugging}
 \begin{itemize}
   \item $10^5 * 10^5 \Rightarrow \text{INTEGER OVERFLOW}$.
   \item If unsure with overflow, use \\
   \texttt{\#define int long long} and stop caring.
-
+  \item 행렬과 기하의 $i, j$ 인덱스 조심. 헷갈리면 쓰면서 가기.
+  \item output이 특정 수열/OX 형태 : 작은 예제를 Exhasutive Search. 모르는 무언가를 알기 위해서는 데이터가 필요하다.
 \end{itemize}
+  \subsection{Thinking}
+    \begin{itemize}
+      \item 모든 경우를 다 할 수 없나? 왜 안 되지? 시간 복잡도 잘 생각해 보기. 정해의 Target Complexity를 먼저 생각하고 주요 알고리즘들의 Complexity로 짜맞추기.\\
+      예를들어, 쿼리가 30만개 들어온다면 한 쿼리를 적어도 $\log{n}$ 에 처리할 방법이 아무튼 있다는 뜻.
+      \item 단조함수이며, 충분히 빠르게 검증가능한가 : Binary Search.
+      \item 차원이 높은 문제 : 차원 내려서 생각하기. 3 $\rightarrow$ 2.
+      \item 이 문제가 사실 그래프 관련 문제는 아닐까?
+        \begin{itemize}
+          \item 만약 그렇다면, `간선' 과 `정점' 은 각각..?
+        \end{itemize}
+      \item 이 문제에 Overlapping Subproblem이 보이나? $\rightarrow$ Dynamic Programming 을 적용.
+      \item 답의 상한이 Reasonable 하게 작은가?
+      \item 답이 단순한 수열이면, Berlekamp-Massey (본선에서) or OEIS (예선)
+      \item 마지막 생각 : 조금 추하지만 해싱이나 Random \texttt{bitset} 을 이용한 $n^2 / 64$ 같은걸로 뚫을 수 있나?
+    \end{itemize}
 \end{multicols}
 \end{document}

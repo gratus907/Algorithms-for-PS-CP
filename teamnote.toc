@@ -1,59 +1,47 @@
-\contentsline {section}{\numberline {1}Settings}{2}% 
-\contentsline {subsection}{\numberline {1.1}C++}{2}% 
-\contentsline {section}{\numberline {2}Data Structures}{2}% 
-\contentsline {subsection}{\numberline {2.1}Segment Tree}{2}% 
-\contentsline {subsection}{\numberline {2.2}Fenwick Tree}{3}% 
-\contentsline {subsection}{\numberline {2.3}Disjoint Set Union (Union - Find)}{3}% 
+\contentsline {section}{\numberline {1}Settings}{3}% 
+\contentsline {subsection}{\numberline {1.1}C++}{3}% 
+\contentsline {section}{\numberline {2}Data Structures}{3}% 
+\contentsline {subsection}{\numberline {2.1}Segment Tree}{3}% 
+\contentsline {subsection}{\numberline {2.2}Disjoint Set Union (Union - Find)}{4}% 
 \contentsline {section}{\numberline {3}Mathematics}{4}% 
 \contentsline {subsection}{\numberline {3.1}Useful Mathematical Formula}{4}% 
 \contentsline {subsection}{\numberline {3.2}Number of Integer Partition}{4}% 
 \contentsline {subsection}{\numberline {3.3}Binomial Coefficient}{4}% 
 \contentsline {subsection}{\numberline {3.4}Extended Euclidean Algorithm}{4}% 
 \contentsline {subsection}{\numberline {3.5}Fast Modulo Exponentiation}{4}% 
-\contentsline {subsection}{\numberline {3.6}Miller-Rabin Primality Testing}{4}% 
+\contentsline {subsection}{\numberline {3.6}Miller-Rabin Primality Testing}{5}% 
 \contentsline {subsection}{\numberline {3.7}Pollard-Rho Factorization}{5}% 
-\contentsline {subsection}{\numberline {3.8}Euler Totient}{5}% 
-\contentsline {subsection}{\numberline {3.9}Modular Multiplicative Inverse}{5}% 
-\contentsline {subsection}{\numberline {3.10}Kitamasa method}{5}% 
-\contentsline {subsection}{\numberline {3.11}Fast Fourier Transform}{5}% 
+\contentsline {subsection}{\numberline {3.8}Euler Totient}{6}% 
+\contentsline {subsection}{\numberline {3.9}Modular Multiplicative Inverse}{6}% 
 \contentsline {section}{\numberline {4}Geometry}{6}% 
 \contentsline {subsection}{\numberline {4.1}CCW}{6}% 
 \contentsline {subsection}{\numberline {4.2}Point in polygon}{6}% 
-\contentsline {subsection}{\numberline {4.3}Closest Pair Problem}{6}% 
-\contentsline {subsection}{\numberline {4.4}Smallest Enclosing Circle}{6}% 
-\contentsline {subsection}{\numberline {4.5}Convex Hull (Graham Scan)}{6}% 
-\contentsline {subsection}{\numberline {4.6}Intersection of Line Segment}{6}% 
-\contentsline {section}{\numberline {5}Graphs}{7}% 
-\contentsline {subsection}{\numberline {5.1}Topological Sorting}{7}% 
-\contentsline {subsection}{\numberline {5.2}Bipartite Checking}{7}% 
-\contentsline {subsection}{\numberline {5.3}MST Kruskal Algorithm}{7}% 
-\contentsline {subsection}{\numberline {5.4}MST Prim Algorithm}{8}% 
-\contentsline {subsection}{\numberline {5.5}MST Borvuka Algorithm}{8}% 
-\contentsline {subsection}{\numberline {5.6}Dinic's Algorithm}{8}% 
-\contentsline {subsection}{\numberline {5.7}Heavy-Light Decomposition}{9}% 
-\contentsline {subsection}{\numberline {5.8}Centroid Decomposition}{9}% 
-\contentsline {subsection}{\numberline {5.9}Hungarian Algorithm}{9}% 
-\contentsline {section}{\numberline {6}Shortest Path}{9}% 
-\contentsline {subsection}{\numberline {6.1}Dijkstra}{9}% 
-\contentsline {subsection}{\numberline {6.2}Bellman Ford}{10}% 
-\contentsline {subsection}{\numberline {6.3}SPFA Algorithm}{10}% 
-\contentsline {subsection}{\numberline {6.4}Floyd-Warshall}{10}% 
-\contentsline {section}{\numberline {7}Dynamic}{11}% 
-\contentsline {subsection}{\numberline {7.1}Longest Increasing Subsequence}{11}% 
-\contentsline {subsection}{\numberline {7.2}Largest Sum Subarray}{11}% 
-\contentsline {subsection}{\numberline {7.3}0-1 Knapsack}{11}% 
-\contentsline {subsection}{\numberline {7.4}Longest Common Subsequence}{11}% 
-\contentsline {subsection}{\numberline {7.5}Edit Distance}{12}% 
-\contentsline {subsection}{\numberline {7.6}Convex Hull Trick}{12}% 
-\contentsline {subsection}{\numberline {7.7}Divide and Conquer Optimization}{12}% 
-\contentsline {subsection}{\numberline {7.8}Knuth Optimization}{12}% 
-\contentsline {section}{\numberline {8}String}{12}% 
-\contentsline {subsection}{\numberline {8.1}KMP Algorithm}{12}% 
-\contentsline {subsection}{\numberline {8.2}Manacher's Algorithm}{12}% 
-\contentsline {subsection}{\numberline {8.3}Trie}{12}% 
-\contentsline {subsection}{\numberline {8.4}Rabin-Karp Hashing}{13}% 
-\contentsline {subsection}{\numberline {8.5}Aho-Corasick Algorithm}{13}% 
-\contentsline {section}{\numberline {9}Miscellaneous}{13}% 
-\contentsline {subsection}{\numberline {9.1}Useful Bitwise Functions in C++}{13}% 
-\contentsline {subsection}{\numberline {9.2}List of Useful Numbers}{14}% 
-\contentsline {section}{\numberline {10}Debugging Checkpoints}{14}% 
+\contentsline {subsection}{\numberline {4.3}Closest Pair Problem}{7}% 
+\contentsline {subsection}{\numberline {4.4}Convex Hull (Graham Scan)}{7}% 
+\contentsline {subsection}{\numberline {4.5}Intersection of Line Segment}{8}% 
+\contentsline {section}{\numberline {5}Graphs}{9}% 
+\contentsline {subsection}{\numberline {5.1}Topological Sorting}{9}% 
+\contentsline {subsection}{\numberline {5.2}Lowest Common Ancestor}{9}% 
+\contentsline {subsection}{\numberline {5.3}MST Kruskal Algorithm}{10}% 
+\contentsline {subsection}{\numberline {5.4}MST Prim Algorithm}{10}% 
+\contentsline {subsection}{\numberline {5.5}Dinic's Algorithm}{11}% 
+\contentsline {section}{\numberline {6}Shortest Path}{12}% 
+\contentsline {subsection}{\numberline {6.1}Dijkstra}{12}% 
+\contentsline {subsection}{\numberline {6.2}Bellman Ford}{12}% 
+\contentsline {subsection}{\numberline {6.3}SPFA Algorithm}{13}% 
+\contentsline {subsection}{\numberline {6.4}Floyd-Warshall}{13}% 
+\contentsline {section}{\numberline {7}Dynamic}{13}% 
+\contentsline {subsection}{\numberline {7.1}Longest Increasing Subsequence}{13}% 
+\contentsline {subsection}{\numberline {7.2}Largest Sum Subarray}{14}% 
+\contentsline {subsection}{\numberline {7.3}0-1 Knapsack}{14}% 
+\contentsline {subsection}{\numberline {7.4}Longest Common Subsequence}{14}% 
+\contentsline {section}{\numberline {8}String}{14}% 
+\contentsline {subsection}{\numberline {8.1}KMP Algorithm}{14}% 
+\contentsline {subsection}{\numberline {8.2}Manacher's Algorithm}{15}% 
+\contentsline {subsection}{\numberline {8.3}Trie}{15}% 
+\contentsline {section}{\numberline {9}Miscellaneous}{16}% 
+\contentsline {subsection}{\numberline {9.1}Useful Bitwise Functions in C++}{16}% 
+\contentsline {subsection}{\numberline {9.2}List of Useful Numbers}{16}% 
+\contentsline {section}{\numberline {10}Checkpoints}{17}% 
+\contentsline {subsection}{\numberline {10.1}Debugging}{17}% 
+\contentsline {subsection}{\numberline {10.2}Thinking}{17}% 
