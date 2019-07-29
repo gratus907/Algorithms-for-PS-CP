@@ -1,31 +1,36 @@
-struct Trie_Node
+struct Trie
 {
-    Trie_Node * child[26];
-    Trie_Node()
+    int trie[NODE_MAX][CHAR_N];
+    int nxt = 1;
+    void insert(const char* s)
     {
-        fill(child,child+26,nullptr);
-        this->end = 0;
-    }
-    bool end;
-    void insert(const char* key)
-    {
-        if (*key == 0)
-            end = true;
-        else
+        int k = 0;
+        for (int i = 0; s[i]; i++)
         {
-            int cur = *key-'a';
-            if (child[cur]==NULL)
-                child[cur] = new Trie_Node();
-            child[cur]->insert(key+1);
+            int t = s[i] - 'a';
+            if (!trie[k][t])
+            {
+                trie[k][t] = nxt;
+                nxt++;
+            }
+            k = trie[k][t];
         }
+        trie[k][26] = 1;
     }
-    bool find(char *key)
+    bool find(const char* s, bool exact = false)
     {
-        if (*key == 0)
-            return false;
-        if (end)
-            return true;
-        int cur = *key - 'a';
-        return child[cur]->find(key+1);
+        int k = 0;
+        for (int i = 0; s[i]; i++)
+        {
+            int t = s[i] - 'a';
+            if (!trie[k][t])
+                return false;
+            k = trie[k][t];
+        }
+        if (exact)
+        {
+            return trie[k][26];
+        }
+        return true;
     }
 };
