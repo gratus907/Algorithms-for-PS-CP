@@ -186,6 +186,7 @@
 
   \subsection{Dinic's Algorithm}
     \verbatiminput{./code/Graph/Dinic.cpp}
+
   %\subsection{Heavy-Light Decomposition}
 
   %\subsection{Centroid Decomposition}
@@ -206,7 +207,8 @@
       \verbatiminput{./code/Graph/Bellman_Ford_Algorithm.cpp}
 
   \subsection{SPFA Algorithm}
-    Average $\order{E}$, worst $\order{VE}$ time. Average-case improvement of Bellman Ford by using an additional queue. $\rightarrow$ 데이터를 누가 짰을지를 생각해 보면 그냥 이런거 집어치우는게 맞을듯. ICPC Preliminary에서나 쓰자.
+    Average $\order{E}$, worst $\order{VE}$ time. Average-case improvement of Bellman Ford by using an additional queue. \\
+    $\rightarrow$ 데이터를 누가 짰을지를 생각해 보면 그냥 이런거 집어치우는게 맞을듯. ICPC Preliminary에서나 쓰자.
 
   \subsection{Floyd-Warshall}
     Works on adjacency matrix, in $\order{V^3}$.
@@ -240,12 +242,13 @@
   \subsection{KMP Algorithm}
     \verbatiminput{./code/String/KMP.cpp}
   \subsection{Manacher's Algorithm}
+    A[i] = $i$ 번을 중심으로 하는 가장 긴 팰린드롬이 되는 반지름.
     \verbatiminput{./code/String/Manacher.cpp}
   \subsection{Trie}
     \verbatiminput{./code/String/Trie.cpp}
-
-  %\subsection{Rabin-Karp Hashing}
-
+  \subsection{Rabin-Karp Hashing}
+    Hashmap[$k$]에, 길이가 len인 부분 문자열의 해시값이 $k$ 가 되는 시작점 인덱스 $i$ 를 push.
+    \verbatiminput{./code/String/Rabin-Karp.cpp}
   %\subsection{Aho-Corasick Algorithm}
 \columnbreak
 
@@ -307,10 +310,21 @@
         \begin{itemize}
           \item 만약 그렇다면, `간선' 과 `정점' 은 각각..?
         \end{itemize}
-      \item 이 문제에 Overlapping Subproblem이 보이나? $\rightarrow$ Dynamic Programming 을 적용.
+      \item 이 문제에 Overlapping Subproblem이 보이나? \\$\rightarrow$ Dynamic Programming 을 적용.
       \item 답의 상한이 Reasonable 하게 작은가?
-      \item 답이 단순한 수열이면, Berlekamp-Massey (본선에서) or OEIS (예선)
       \item 마지막 생각 : 조금 추하지만 해싱이나 Random \texttt{bitset} 을 이용한 $n^2 / 64$ 같은걸로 뚫을 수 있나?
     \end{itemize}
+\newpage
+\section*{업데이트 노트 / To-Do}
+\textbf{이 페이지는 실제 인쇄 팀노트에 포함되지 않습니다}
+\begin{itemize}
+  \item 190731 : Rabin-Karp Hashing 추가.
+  \item To-do : LCA 코드에 최단 / 최장 거리 간선, 거리 구하기 추가.
+  \item To-do : Segment Tree Lazy Propagation 추가.
+  \item To-do : Segment Tree Struct 구현체 넣기.
+  \item To-do : HLD 코드 넣기.
+  \item To-do : Trie 구현체 두가지 방식 넣기.
+\columnbreak
+\end{itemize}
 \end{multicols}
 \end{document}
