@@ -92,19 +92,20 @@
   \subsection{C++}
 
 \section{Data Structures}
-  \subsection{Segment Tree}
-     To deal with queries on intervals, we use segment tree.
-     \verbatiminput{./code/Data_Structures/Segtree_Make.cpp}
-     Updating segment tree
-     \verbatiminput{./code/Data_Structures/Segtree_Update.cpp}
-     Answering queries with segment tree
-     \verbatiminput{./code/Data_Structures/Segtree_Answerquery.cpp}
-     Answering range minimum queries with segment tree
-     \verbatiminput{./code/Data_Structures/Range_Minimum_Query.cpp}
+  \subsection{Segment Tree - Range Minimum}
+     필요한 연산에 따라 적당히 수정해서 쓸 수 있는 SegTree 구현. 현재 range minimum을 기준으로 작성됨.\\
+     주의 : 배열이 0-base 인덱스인 것을 가정하고 작성되어 있음.
+     \verbatiminput{Range_Minimum_Query.cpp}
+
+  \subsection{Segment Tree Lazy Propagation}
+     구간 업데이트 연산을 빠르게 하기 위한 Lazy Propagation이 적용된 SegTree.\\
+     주의 : 배열이 0-base 인덱스인 것을 가정하고 작성되어 있음.
+     \verbatiminput{Segment_Tree_Lazy.cpp}
     \columnbreak
-  %\subsection{Fenwick Tree}
+  \subsection{Fenwick Tree}
+    \verbatiminput{./code/Data_Structures/Fenwick_Tree.cpp}
   \subsection{Disjoint Set Union (Union - Find)}
-      \verbatiminput{./code/Data_Structures/Disjoint_Set_Union.cpp}
+    \verbatiminput{./code/Data_Structures/Disjoint_Set_Union.cpp}
 
 \columnbreak
 \section{Mathematics}
@@ -115,6 +116,7 @@
         C_n = \frac{1}{n+1}\binom{2n}{n}
       \]
       \item Nim Game : Remember - XOR of all piles.
+      \item Lucas Formula : $\binom{n}{m} = \prod \binom{n_i}{m_i} \mod p$
     \end{itemize}
   \subsection{Number of Integer Partition}
     \verbatiminput{./code/Mathematics/Num_of_Integer_Partition.py}
@@ -155,7 +157,9 @@
   \subsection{Point in polygon}
     Returns boolean, if point is in the polygon (represented as vector of points).
     \verbatiminput{./code/Geometry/Point_in_polygon.cpp}
-
+  \subsection{Length of Segment Union}
+    Length of segment union, from vector of \{start, end\}.
+    \verbatiminput{./code/Geometry/Length_of_Segment_Union.cpp}
   \subsection{Closest Pair Problem}
     Requires : Points must be sorted with x-axis.\\
     Runs in $\mathcal{O}(n \log^2 n)$
@@ -165,13 +169,16 @@
   \subsection{Intersection of Line Segment}
     \verbatiminput{./code/Geometry/Line_Segment_Intersection.cpp}
 \columnbreak
+
 \section{Graphs}
   \subsection{Topological Sorting}
   Topological sorting with dfs
     \verbatiminput{./code/Graph/Topological_Sort.cpp}
 
   \subsection{Lowest Common Ancestor}
-  LCA Algorithm by sparse table
+  LCA Algorithm by sparse table.
+  minlen : $(x, y)$ 사이를 잇는 간선 중 최소 길이 간선. \\
+  maxlen : $(x, y)$ 사이를 잇는 간선 중 최대 길이 간선.
     \verbatiminput{./code/Graph/Lowest_Common_Ancestor.cpp}
 
   \subsection{MST Kruskal Algorithm}
@@ -253,6 +260,11 @@
 \columnbreak
 
 \section{Miscellaneous}
+  \subsection{Binary and Ternary Search}
+    Preventing stupid mistakes by writing garbage instead of proper binary search.
+    \verbatiminput{./code/Misc/Binary_Search.cpp}
+    Ternary search
+    \verbatiminput{./code/Misc/Ternary_search}
   \subsection{Useful Bitwise Functions in C++}
   \begin{verbatim}
     int __builtin_clz(int x);// number of leading zero
@@ -309,6 +321,7 @@
       \item 이 문제가 사실 그래프 관련 문제는 아닐까?
         \begin{itemize}
           \item 만약 그렇다면, `간선' 과 `정점' 은 각각..?
+          \item 간선과 정점이 몇 개 정도 있는가?
         \end{itemize}
       \item 이 문제에 Overlapping Subproblem이 보이나? \\$\rightarrow$ Dynamic Programming 을 적용.
       \item 답의 상한이 Reasonable 하게 작은가?
@@ -320,8 +333,8 @@
 \begin{itemize}
   \item 190731 : Rabin-Karp Hashing 추가.
   \item To-do : LCA 코드에 최단 / 최장 거리 간선, 거리 구하기 추가.
-  \item To-do : Segment Tree Lazy Propagation 추가.
-  \item To-do : Segment Tree Struct 구현체 넣기.
+  \item 190731 : Segment Tree Lazy Propagation 추가.
+  \item 190731 : Segment Tree Struct 구현체로 변경.
   \item To-do : HLD 코드 넣기.
   \item To-do : Trie 구현체 두가지 방식 넣기.
 \columnbreak

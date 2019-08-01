@@ -5,12 +5,12 @@ int tree[TSIZE + 1];
 int query(int p)
 {
     int ret = 0;
-    for (; p > 0; p -= p & -p) 
+    for (; p > 0; p -= p & -p)
         ret += tree[p];
     return ret;
 }
 
-// Adds val to element with index pos
+// Adds val to element with index p
 void add(int p, int val)
 {
     for (; p <= TSIZE; p += p & -p) tree[p] += val;

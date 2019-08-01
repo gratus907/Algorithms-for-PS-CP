@@ -1,19 +1,20 @@
-//modified from jason9319's original code.
-int n, m;
+int n, k;
 bool visited[101010];
-int par[101010][21];
+int par[101010][21], maxedge[101010][21], minedge[101010][21];
 int d[101010];
-vector <int> graph[101010];
+vector <pii> graph[101010]; // {destination, weight}
 void dfs(int here,int depth) // run dfs(root,0)
 {
     visited[here] = true;
     d[here] = depth;
-    for (int there : graph[here])
+    for (auto there : graph[here])
     {
-        if (visited[there])
+        if (visited[there.first])
             continue;
-        par[there][0] = here;
-        dfs(there, depth + 1);
+        dfs(there.first, depth + 1);
+        par[there.first][0] = here;
+        maxedge[there.first][0] = there.second;
+        minedge[there.first][0] = there.second;
     }
 }
 
@@ -24,30 +25,48 @@ void precomputation()
         for (int j = 1; j<=n; j++)
         {
             par[j][i] = par[par[j][i-1]][i-1];
+            maxedge[j][i] = max(maxedge[j][i - 1], maxedge[par[j][i - 1]][i - 1]);
+            minedge[j][i] = min(minedge[j][i - 1], minedge[par[j][i - 1]][i - 1]);
         }
     }
 }
 
-int lca(int x, int y)
+pii lca(int x, int y)
 {
+    int maxlen = INT_MIN;
+    int minlen = INT_MAX;
     if (d[x]>d[y])
         swap(x,y);
     for (int i = 20; i>=0; i--)
     {
         if (d[y]-d[x] >= (1<<i))
         {
+            minlen = min(minlen,minedge[y][i]);
+            maxlen = max(maxlen,maxedge[y][i]);
             y = par[y][i];
         }
     }
     if (x==y)
-        return x;
+        return {minlen, maxlen};
     for (int i = 20; i>=0; i--)
     {
         if (par[x][i] != par[y][i])
         {
+            minlen = min(minlen,min(minedge[x][i],minedge[y][i]));
+            maxlen = max(maxlen,max(maxedge[x][i],maxedge[y][i]));
             x = par[x][i];
             y = par[y][i];
         }
     }
-    return par[x][0];
+    minlen = min(minlen,min(minedge[x][0],minedge[y][0]));
+    maxlen = max(maxlen,max(maxedge[x][0],maxedge[y][0]));
+
+    int lca_point = par[x][0];
+    return {minlen,maxlen};
+}
+
+void tobedone()
+{
+    dfs(1,0);
+    precomputation();
 }
