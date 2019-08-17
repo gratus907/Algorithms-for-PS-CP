@@ -25,8 +25,10 @@ void precomputation()
         for (int j = 1; j<=n; j++)
         {
             par[j][i] = par[par[j][i-1]][i-1];
-            maxedge[j][i] = max(maxedge[j][i - 1], maxedge[par[j][i - 1]][i - 1]);
-            minedge[j][i] = min(minedge[j][i - 1], minedge[par[j][i - 1]][i - 1]);
+            maxedge[j][i] = max(maxedge[j][i - 1],
+                maxedge[par[j][i - 1]][i - 1]);
+            minedge[j][i] = min(minedge[j][i - 1],
+                minedge[par[j][i - 1]][i - 1]);
         }
     }
 }

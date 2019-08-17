@@ -1,19 +1,15 @@
 const int INF = 987654321;
-const int MX = V+something;
-struct Edgeout
+const int MX = 105050;
+struct Edge
 {
     int dest, w;
-    bool operator<(const Edgeout &p) const
+    bool operator<(const Edge &p) const
     {
         return w > p.w;
     }
 };
 
-vector <Edgeout> edgelist[MX];
-int V, E, start;
-int dist[MX];
-
-bool relax(Edgeout edge, int u)
+bool relax(Edge edge, int u, int dist[])
 {
     bool flag = 0;
     int v = edge.dest, w = edge.w;
@@ -25,21 +21,21 @@ bool relax(Edgeout edge, int u)
     return flag;
 }
 
-int dijkstra()
+int dijkstra(int dist[], int start, vector<Edge> graph[])
 {
     fill(dist,dist+MX,INF);
     dist[start] = 0;
-    priority_queue<Edgeout> pq;
+    priority_queue<Edge> pq;
     pq.push({start,0});
     while(!pq.empty())
     {
-        Edgeout x = pq.top();
+        Edge x = pq.top();
         int v = x.dest, w = x.w;
         pq.pop();
         if (w>dist[v])
             continue;
-        for (auto ed : edgelist[v])
-            if (relax(ed,v))
+        for (auto ed : graph[v])
+            if (relax(ed, v, dist))
                 pq.push({ed.dest,dist[ed.dest]});
     }
 }
