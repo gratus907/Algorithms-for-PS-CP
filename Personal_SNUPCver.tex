@@ -42,8 +42,8 @@
 \titlespacing{\subsection}{0pt}{*1}{*0.5}
 \titlespacing{\subsubsection}{0pt}{*0}{*0}
 \topsep=5pt \partopsep=5pt
-\title{\Huge{\textsf{Little Piplup}}}
-\author{Gratus907(Wonseok Shin), Coffeetea(Jinje Han), DhDroid(Donghyun Son)}
+\title{SNUPC Algorithm Cheatsheet}
+\author{Gratus907(Wonseok Shin)}
 \date{ }
 
 \begin{document}
@@ -90,23 +90,24 @@
 
 \section{Settings}
   \subsection{C++}
+    O3, Ofast, avx, avx2, fma 때려넣고 기도메타도 필요하면 사용하기.
     \verbatiminput{./code/Header.cpp}
 \section{Data Structures}
   \subsection{Segment Tree - Range Minimum}
      필요한 연산에 따라 적당히 수정해서 쓸 수 있는 SegTree 구현. 현재 range minimum을 기준으로 작성됨.\\
      주의 : 배열이 0-base 인덱스인 것을 가정하고 작성되어 있음.
-     \verbatiminput{Range_Minimum_Query.cpp}
+     \verbatiminput{./code/Data_Structures/Range_Minimum_Query.cpp}
 
   \subsection{Segment Tree Lazy Propagation}
      구간 업데이트 연산을 빠르게 하기 위한 Lazy Propagation이 적용된 SegTree.\\
      주의 : 배열이 0-base 인덱스인 것을 가정하고 작성되어 있음.
-     \verbatiminput{Segment_Tree_Lazy.cpp}
+     \verbatiminput{./code/Data_Structures/Segment_Tree_Lazy.cpp}
     \columnbreak
   \subsection{Fenwick Tree}
     \verbatiminput{./code/Data_Structures/Fenwick_Tree.cpp}
   \subsection{Disjoint Set Union (Union - Find)}
     \verbatiminput{./code/Data_Structures/Disjoint_Set_Union.cpp}
-
+  \subsection{Persistent Segment Tree}
 \columnbreak
 \section{Mathematics}
   \subsection{Useful Mathematical Formula}
@@ -133,7 +134,7 @@
     \verbatiminput{./code/Mathematics/Fast_Modulo_Exponentiation.cpp}
 
   \subsection{Miller-Rabin Primality Testing}
-  Base values of $a$ chosen so that results are tested to be correct up to $10^14$.
+  Base values of $a$ chosen so that results are tested to be correct up to $10^{14}$.
     \verbatiminput{./code/Mathematics/Miller_Rabin_Test.cpp}
 
   \subsection{Pollard-Rho Factorization}
@@ -226,6 +227,8 @@
   \subsection{Longest Increasing Subsequence}
     Find LIS in $\order{n \log n}$ time.
       \verbatiminput{./code/Dynamic_Programming/Longest_Increasing_Subsequence.cpp}
+    Multiset 기반으로 더 짧게 구현
+      \verbatiminput{./code/Dynamic_Programming/Multiset_Shorter_LIS.cpp}
 
   \subsection{Largest Sum Subarray}
     Computes sum of largest sum subarray in $\order{N}$
@@ -268,66 +271,71 @@
     Ternary search
     \verbatiminput{./code/Misc/Ternary_search.cpp}
   \subsection{Useful Bitwise Functions in C++}
-  \begin{verbatim}
-    int __builtin_clz(int x);// number of leading zero
-    int __builtin_ctz(int x);// number of trailing zero
-    int __builtin_clzll(ll x);// number of leading zero
-    int __builtin_ctzll(ll x);// number of trailing zero
-    int __builtin_popcount(int x);// number of 1-bits in x
-    int __builtin_popcountll(ll x);// number of 1-bits in x
+    \begin{verbatim}
+      int __builtin_clz(int x);// number of leading zero
+      int __builtin_ctz(int x);// number of trailing zero
+      int __builtin_clzll(ll x);// number of leading zero
+      int __builtin_ctzll(ll x);// number of trailing zero
+      int __builtin_popcount(int x);// number of 1-bits in x
+      int __builtin_popcountll(ll x);// number of 1-bits in x
 
-    lsb(n): (n & -n); // last bit (smallest)
-    floor(log2(n)): 31 - __builtin_clz(n | 1);
-    floor(log2(n)): 63 - __builtin_clzll(n | 1);
+      lsb(n): (n & -n); // last bit (smallest)
+      floor(log2(n)): 31 - __builtin_clz(n | 1);
+      floor(log2(n)): 63 - __builtin_clzll(n | 1);
 
-    // compute next perm. ex) 00111, 01011, 01101, 01110, 10011, 10101..
-    ll next_perm(ll v)
-    {
-      ll t = v | (v-1);
-      return (t + 1) | (((~t & -~t) - 1) >> (__builtin_ctz(v) + 1));
-    }
-  \end{verbatim}
+      // compute next perm. ex) 00111, 01011, 01101, 01110, 10011, 10101..
+      ll next_perm(ll v)
+      {
+        ll t = v | (v-1);
+        return (t + 1) | (((~t & -~t) - 1) >> (__builtin_ctz(v) + 1));
+      }
+    \end{verbatim}
   \subsection{List of Useful Numbers}
-  \begin{verbatim}
-    < 10^k    prime   # of prime          < 10^k            prime
-    -------------------------------------------------------------
-    1             7            4          10           9999999967
-    2            97           25          11          99999999977
-    3           997          168          12         999999999989
-    4          9973         1229          13        9999999999971
-    5         99991         9592          14       99999999999973
-    6        999983        78498          15      999999999999989
-    7       9999991       664579          16     9999999999999937
-    8      99999989      5761455          17    99999999999999997
-    9     999999937     50847534          18   999999999999999989
-  \end{verbatim}
+    \begin{verbatim}
+      < 10^k    prime   # of prime          < 10^k            prime
+      -------------------------------------------------------------
+      1             7            4          10           9999999967
+      2            97           25          11          99999999977
+      3           997          168          12         999999999989
+      4          9973         1229          13        9999999999971
+      5         99991         9592          14       99999999999973
+      6        999983        78498          15      999999999999989
+      7       9999991       664579          16     9999999999999937
+      8      99999989      5761455          17    99999999999999997
+      9     999999937     50847534          18   999999999999999989
+    \end{verbatim}
+  \subsection{Order Statistics Tree}
+    $k$번째 수 쿼리를 $O(\log n)$ 에 알아서 잘 처리해 주는 마법의 자료구조. 생각보다 상수가 크니 조심해야 함. Merge Sort Tree를 짜는 거보단 나은 선택일 것 같다.
+    \verbatiminput{./code/Misc/Pbds_OST.cpp}
+
 \columnbreak
 
 
 \section{Checkpoints}
   \subsection{Debugging}
-\begin{itemize}
-  \item $10^5 * 10^5 \Rightarrow \text{INTEGER OVERFLOW}$. 특히 for문 안에서 $i*i$ 할 때 조심하기.
-  \item If unsure with overflow, use \\
-  \texttt{\#define int long long} and stop caring.
-  \item 행렬과 기하의 $i, j$ 인덱스 조심. 헷갈리면 쓰면서 가기.
-  \item output이 특정 수열/OX 형태 : 작은 예제를 Exhasutive Search. 모르는 무언가를 알기 위해서는 데이터가 필요하다.
-\end{itemize}
+    \begin{itemize}
+      \item $10^5 * 10^5 \Rightarrow \text{INTEGER OVERFLOW}$. 특히 for문 안에서 $i*i$ 할 때 조심하기.
+      \item If unsure with overflow, use \\
+      \texttt{\#define int long long} and stop caring. 이때 \texttt{int32\_t main()}.
+      \item 행렬과 기하의 $i, j$ 인덱스 조심. 헷갈리면 쓰면서 가기. 문제에 $x, y$ 좌표로 주면 그걸로 가도 좋을듯.
+      \item output이 특정 수열/OX 형태 : 작은 예제를 By hand 또는 간단한 코드로 Exhasutive Search. 모르는 무언가를 알기 위해서는 데이터가 필요하다.
+    \end{itemize}
   \subsection{Thinking}
     \begin{itemize}
-      \item 모든 경우를 다 할 수 없나? 왜 안 되지? 시간 복잡도 잘 생각해 보기. 정해의 Target Complexity를 먼저 생각하고 주요 알고리즘들의 Complexity로 짜맞추기.\\
+      \item 모든 경우를 다 할 수 없나? 왜 안 되지? 시간 복잡도 잘 생각해 보기. 알고리즘 생각하기 전에 Bruteforce에서 출발하기. 정해의 Target Complexity를 먼저 생각하고 주요 알고리즘들의 Complexity로 짜맞추기.\\
       예를들어, 쿼리가 30만개 들어온다면 한 쿼리를 적어도 $\log{n}$ 에 처리할 방법이 아무튼 있다는 뜻.
       \item 단조함수이며, 충분히 빠르게 검증가능한가 : Binary Search.
       \item 차원이 높은 문제 : 차원 내려서 생각하기. 3 $\rightarrow$ 2.
-      \item 이 문제가 사실 그래프 관련 문제는 아닐까?
-        \begin{itemize}
-          \item 만약 그렇다면, `간선' 과 `정점' 은 각각..?
-          \item 간선과 정점이 몇 개 정도 있는가?
-        \end{itemize}
+      \item 이 문제가 사실 그래프 관련 문제는 아닐까? 모델링이 가능할까?
+          \begin{itemize}
+            \item 만약 그렇다면, `간선' 과 `정점' 은 각각..?
+            \item 간선과 정점이 몇 개 정도 있는가?
+          \end{itemize}
       \item 이 문제에 Overlapping Subproblem이 보이나? \\$\rightarrow$ Dynamic Programming 을 적용.
       \item 답의 상한이 Reasonable 하게 작은가?
       \item 그래프 문제에서, 어떤 ``조건" 이 들어갔을 때 $\to$ 이 문제를 ``정점을 늘림으로써" 단순한 그래프 문제로 바꿀 수 있나? (ex : SNUPC 2018 달빛 여우) 이를테면, 홀짝성에 따라 점을 2배로 늘림으로써?
       \item DP도 마찬가지. 어떤 조건을 단순화하기 위해 상태의 수를 사이사이에 집어넣을 수 있나?
+      \item Square root Decomposition : $O(n \log n)$ 이 생각나면 좋을 것 같지만 잘 생각나지 않고, 제한을 보니 $O(n \sqrt{n})$ 이면 될것도 같이 생겼을 때 생각해 보기.
       \item 마지막 생각 : 조금 추하지만 해싱이나 Random, \texttt{bitset} 을 이용한 $n^2 / 64$ 같은걸로 뚫을 수 있나?
     \end{itemize}
 \newpage
