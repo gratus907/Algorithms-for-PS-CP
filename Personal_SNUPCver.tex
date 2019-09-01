@@ -26,8 +26,8 @@
 \usepackage{fancyhdr}
 
 \pagestyle{fancy}
-\fancyhead[R]{Little Piplup}
-\fancyhead[L]{Seoul National University}
+\fancyhead[R]{Wonseok Shin}
+\fancyhead[L]{SNUPC Algorithm Note}
 \usepackage[compact]{titlesec}
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
 \DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
@@ -42,42 +42,53 @@
 \titlespacing{\subsection}{0pt}{*1}{*0.5}
 \titlespacing{\subsubsection}{0pt}{*0}{*0}
 \topsep=5pt \partopsep=5pt
-\title{SNUPC Algorithm Cheatsheet}
-\author{Gratus907(Wonseok Shin)}
+\title{\textbf{SNUPC Jammanbo's Note}}
+\author{ }
 \date{ }
 
 \begin{document}
+% Original Cover page for team note.
 \begin{comment}
-{
-  \setlength{\columnseprule}{0pt}
-  \begin{multicols}{3}\raggedcolumns
-  \vspace*{\fill}
-  \begin{figure}[H]
-  \includegraphics[width=\linewidth]{piplup}
-  \end{figure}%
-  \vspace*{\fill}
-  \columnbreak
-  \begin{center}
-  \vspace*{\fill}
-  \huge{\textbf{Little Piplup}\\}
-  \vspace{2em}
-    \LARGE{Contest Teamnote \\}
-   \large{UCPC 2019 ver}
-  \vspace*{\fill}
-  \end{center}
-  \columnbreak
+  {
+    \setlength{\columnseprule}{0pt}
+    \begin{multicols}{3}\raggedcolumns
+    \vspace*{\fill}
+    \begin{figure}[H]
+    \includegraphics[width=\linewidth]{piplup}
+    \end{figure}%
+    \vspace*{\fill}
+    \columnbreak
+    \begin{center}
+    \vspace*{\fill}
+    \huge{\textbf{Little Piplup}\\}
+    \vspace{2em}
+      \LARGE{Contest Teamnote \\}
+     \large{UCPC 2019 ver}
+    \vspace*{\fill}
+    \end{center}
+    \columnbreak
 
-  \vspace*{\fill}
-  \begin{figure}[H]
-  \includegraphics[width=\linewidth]{revplup}
-  \end{figure}
+    \vspace*{\fill}
+    \begin{figure}[H]
+    \includegraphics[width=\linewidth]{revplup}
+    \end{figure}
 
-  \vspace*{\fill}
-  \end{multicols}
-}
+    \vspace*{\fill}
+    \end{multicols}
+  }
 \end{comment}
 
-
+% Personal Cover Page
+  \begin{center}
+    \Huge{\textbf{SNUPC Jammanbo's Note}}\\
+    \vspace{0.5em}
+    \Large{Gratus907 (Wonseok Shin)}
+    \vspace{-1.5em}
+  \end{center}
+  \begin{figure}[H]
+  \includegraphics[width = \linewidth]{Jammanbo.jpg}
+  \end{figure}
+% Document Starts from here
 
 \newpage
 \maketitle
@@ -86,8 +97,6 @@
 \end{multicols}
 \pagebreak
 \begin{multicols}{2}\raggedcolumns
-
-
 \section{Settings}
   \subsection{C++}
     O3, Ofast, avx, avx2, fma 때려넣고 기도메타도 필요하면 사용하기.
@@ -102,7 +111,6 @@
      구간 업데이트 연산을 빠르게 하기 위한 Lazy Propagation이 적용된 SegTree.\\
      주의 : 배열이 0-base 인덱스인 것을 가정하고 작성되어 있음.
      \verbatiminput{./code/Data_Structures/Segment_Tree_Lazy.cpp}
-    \columnbreak
   \subsection{Fenwick Tree}
     \verbatiminput{./code/Data_Structures/Fenwick_Tree.cpp}
   \subsection{Disjoint Set Union (Union - Find)}
@@ -149,7 +157,13 @@
 
   %\subsection{Kitamasa method}
 
-  %\subsection{Fast Fourier Transform}
+  \subsection{Fast Fourier Transform}
+    Convolution $C_i$ 를 $O(n \log n)$ 에 구한다.
+    $$C_i = \sum_{j = 0}^{i} a_j b_{i-j}$$
+    \verbatiminput{./code/Mathematics/Fast_Fourier_Transform.cpp}
+  \subsection{Number Theoretic Transform}
+    Modulo version FFT.
+    \verbatiminput{./code/Mathematics/Number_Theoretic_Transform.cpp}
   \columnbreak
 \columnbreak
 \section{Geometry}
@@ -347,7 +361,9 @@
   \item 190731 : Segment Tree Lazy Propagation 추가.
   \item 190731 : Segment Tree Struct 구현체로 변경. (UCPC Finalized)
   \item 190817 : SPFA Algorithm 추가.
+  \item 190826 : FFT, NTT 추가.
   \item To-do : HLD 코드 넣기.
+  \item To-do : Centroid Decomposition
   \item To-do : Trie 구현체 두가지 방식 넣기.
 \columnbreak
 \end{itemize}
