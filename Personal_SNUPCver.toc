@@ -1,9 +1,10 @@
 \contentsline {section}{\numberline {1}Settings}{3}% 
 \contentsline {subsection}{\numberline {1.1}C++}{3}% 
+\contentsline {subsection}{\numberline {1.2}Other Setting}{3}% 
 \contentsline {section}{\numberline {2}Data Structures}{3}% 
 \contentsline {subsection}{\numberline {2.1}Segment Tree - Range Minimum}{3}% 
-\contentsline {subsection}{\numberline {2.2}Segment Tree Lazy Propagation}{3}% 
-\contentsline {subsection}{\numberline {2.3}Fenwick Tree}{4}% 
+\contentsline {subsection}{\numberline {2.2}Segment Tree Lazy Propagation}{4}% 
+\contentsline {subsection}{\numberline {2.3}Fenwick Tree}{5}% 
 \contentsline {subsection}{\numberline {2.4}Disjoint Set Union (Union - Find)}{5}% 
 \contentsline {subsection}{\numberline {2.5}Persistent Segment Tree}{5}% 
 \contentsline {section}{\numberline {3}Mathematics}{6}% 

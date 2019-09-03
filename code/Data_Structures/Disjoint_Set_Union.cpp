@@ -3,7 +3,10 @@ struct Disjoint_Set_Union
 {
     int connected;
     int parent[V], size[V];
-
+    Disjoint_Set_Union()
+    {
+        init(V);
+    }
     void init(int n)
     {
         for(int i=1;i<=n;i++)
@@ -32,7 +35,7 @@ struct Disjoint_Set_Union
         if(u==v)
             return;
         if(size[u]>size[v])
-            swap(par1, par2);
+            swap(u, v);
         size[v]+=size[u];
         size[u] = 0;
         parent[u] = parent[v];

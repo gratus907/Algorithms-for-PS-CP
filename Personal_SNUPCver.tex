@@ -101,15 +101,21 @@
   \subsection{C++}
     O3, Ofast, avx, avx2, fma 때려넣고 기도메타도 필요하면 사용하기.
     \verbatiminput{./code/Header.cpp}
+  \subsection{Other Setting}
+    \begin{itemize}
+      \item VSC Color Theme : One Dark Pro Monokai Darker
+      \item Vimrc
+      \verbatiminput{./code/vimrc.txt}
+    \end{itemize}
 \section{Data Structures}
   \subsection{Segment Tree - Range Minimum}
      필요한 연산에 따라 적당히 수정해서 쓸 수 있는 SegTree 구현. 현재 range minimum을 기준으로 작성됨.\\
-     주의 : 배열이 0-base 인덱스인 것을 가정하고 작성되어 있음.
+     배열 0-base
      \verbatiminput{./code/Data_Structures/Range_Minimum_Query.cpp}
 
   \subsection{Segment Tree Lazy Propagation}
      구간 업데이트 연산을 빠르게 하기 위한 Lazy Propagation이 적용된 SegTree.\\
-     주의 : 배열이 0-base 인덱스인 것을 가정하고 작성되어 있음.
+     배열 0-base
      \verbatiminput{./code/Data_Structures/Segment_Tree_Lazy.cpp}
   \subsection{Fenwick Tree}
     \verbatiminput{./code/Data_Structures/Fenwick_Tree.cpp}
@@ -339,6 +345,7 @@
       \item 모든 경우를 다 할 수 없나? 왜 안 되지? 시간 복잡도 잘 생각해 보기. 알고리즘 생각하기 전에 Bruteforce에서 출발하기. 정해의 Target Complexity를 먼저 생각하고 주요 알고리즘들의 Complexity로 짜맞추기.\\
       예를들어, 쿼리가 30만개 들어온다면 한 쿼리를 적어도 $\log{n}$ 에 처리할 방법이 아무튼 있다는 뜻.
       \item 단조함수이며, 충분히 빠르게 검증가능한가 : Binary Search.
+      \item 특히 ``가능한 최대의 $x$" $\to$ Binary Search.
       \item 차원이 높은 문제 : 차원 내려서 생각하기. 3 $\rightarrow$ 2.
       \item 이 문제가 사실 그래프 관련 문제는 아닐까? 모델링이 가능할까?
           \begin{itemize}
