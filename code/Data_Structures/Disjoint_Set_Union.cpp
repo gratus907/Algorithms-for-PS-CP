@@ -1,11 +1,10 @@
 // Original Author : Ashishgup
 struct Disjoint_Set_Union
 {
-    int connected;
     int parent[V], size[V];
-    Disjoint_Set_Union()
+    Disjoint_Set_Union(int n = V-1)
     {
-        init(V);
+        init(n);
     }
     void init(int n)
     {
@@ -14,7 +13,6 @@ struct Disjoint_Set_Union
             parent[i]=i;
             size[i]=1;
         }
-        connected=n;
     }
     int Find(int k)
     {
