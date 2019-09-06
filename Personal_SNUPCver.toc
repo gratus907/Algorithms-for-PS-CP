@@ -8,16 +8,15 @@
 \contentsline {subsection}{\numberline {2.4}Disjoint Set Union (Union - Find)}{5}% 
 \contentsline {section}{\numberline {3}Mathematics}{6}% 
 \contentsline {subsection}{\numberline {3.1}Useful Mathematical Formula}{6}% 
-\contentsline {subsection}{\numberline {3.2}Number of Integer Partition}{6}% 
-\contentsline {subsection}{\numberline {3.3}Binomial Coefficient}{6}% 
-\contentsline {subsection}{\numberline {3.4}Extended Euclidean Algorithm}{6}% 
-\contentsline {subsection}{\numberline {3.5}Fast Modulo Exponentiation}{7}% 
-\contentsline {subsection}{\numberline {3.6}Miller-Rabin Primality Testing}{7}% 
-\contentsline {subsection}{\numberline {3.7}Pollard-Rho Factorization}{7}% 
-\contentsline {subsection}{\numberline {3.8}Euler Totient}{8}% 
-\contentsline {subsection}{\numberline {3.9}Modular Multiplicative Inverse}{8}% 
-\contentsline {subsection}{\numberline {3.10}Fast Fourier Transform}{8}% 
-\contentsline {subsection}{\numberline {3.11}Number Theoretic Transform}{9}% 
+\contentsline {subsection}{\numberline {3.2}Binomial Coefficient}{6}% 
+\contentsline {subsection}{\numberline {3.3}Extended Euclidean Algorithm}{6}% 
+\contentsline {subsection}{\numberline {3.4}Fast Modulo Exponentiation}{7}% 
+\contentsline {subsection}{\numberline {3.5}Miller-Rabin Primality Testing}{7}% 
+\contentsline {subsection}{\numberline {3.6}Pollard-Rho Factorization}{7}% 
+\contentsline {subsection}{\numberline {3.7}Euler Totient}{8}% 
+\contentsline {subsection}{\numberline {3.8}Modular Multiplicative Inverse}{8}% 
+\contentsline {subsection}{\numberline {3.9}Fast Fourier Transform}{8}% 
+\contentsline {subsection}{\numberline {3.10}Number Theoretic Transform}{9}% 
 \contentsline {section}{\numberline {4}Geometry}{10}% 
 \contentsline {subsection}{\numberline {4.1}CCW}{10}% 
 \contentsline {subsection}{\numberline {4.2}Point in polygon}{10}% 

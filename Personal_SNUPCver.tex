@@ -43,7 +43,7 @@
 \titlespacing{\subsubsection}{0pt}{*0}{*0}
 \topsep=5pt \partopsep=5pt
 \title{\textbf{SNUPC Jammanbo's Note}}
-\author{ }
+\author{Let - Jammanbo - Win - Div2!}
 \date{ }
 
 \begin{document}
@@ -86,7 +86,10 @@
     \vspace{-1.5em}
   \end{center}
   \begin{figure}[H]
-  \includegraphics[width = \linewidth]{Jammanbo.jpg}
+  \begin{center}
+  \includegraphics[width = 0.5\linewidth]{jammanbo.png}
+
+  \end{center}
   \end{figure}
 % Document Starts from here
 
@@ -104,7 +107,8 @@
   \subsection{Other Setting}
     \begin{itemize}
       \item VSC Color Theme : One Dark Pro Monokai Darker
-      \item Vimrc
+      \item C++ compile run, F5 세팅 정도는 해놓기. Default에 \texttt{-std=c++17 < test.in} 해두면 편할듯.
+      \item Vimrc : 혹시나 vim을 정말 써야만 하는 경우에 사용.
       \verbatiminput{./code/vimrc}
     \end{itemize}
 \section{Data Structures}
@@ -132,8 +136,6 @@
       \item Nim Game : Remember - XOR of all piles.
       \item Lucas Formula : $\binom{n}{m} = \prod \binom{n_i}{m_i} \mod p$
     \end{itemize}
-  \subsection{Number of Integer Partition}
-    \verbatiminput{./code/Mathematics/Num_of_Integer_Partition.py}
 
   \subsection{Binomial Coefficient}
     Fast-to-Type Binomial coefficient, in $O(k)$ time.
@@ -327,9 +329,6 @@
     $k$번째 수 쿼리를 $O(\log n)$ 에 알아서 잘 처리해 주는 마법의 자료구조. 생각보다 상수가 크니 조심해야 함. Merge Sort Tree를 짜는 거보단 나은 선택일 것 같다.
     \verbatiminput{./code/Misc/Pbds_OST.cpp}
 
-\columnbreak
-
-
 \section{Checkpoints}
   \subsection{Debugging}
     \begin{itemize}
@@ -341,8 +340,14 @@
     \end{itemize}
   \subsection{Thinking}
     \begin{itemize}
-      \item 모든 경우를 다 할 수 없나? 왜 안 되지? 시간 복잡도 잘 생각해 보기. 알고리즘 생각하기 전에 Bruteforce에서 출발하기. 정해의 Target Complexity를 먼저 생각하고 주요 알고리즘들의 Complexity로 짜맞추기.\\
+      \item 모든 경우를 다 할 수 없나? 왜 안 되지? 시간 복잡도 잘 생각해 보기. 항상 생각은 Brute Force에서 출발하자. 정해의 Target Complexity를 먼저 생각하고 주요 알고리즘들의 Complexity로 짜맞추기.\\
       예를들어, 쿼리가 30만개 들어온다면 한 쿼리를 적어도 $\log{n}$ 에 처리할 방법이 아무튼 있다는 뜻.
+      \item 그 방법이 뭐지? xxxx한 일을 어떤 시간복잡도에 실행하는 적절한 자료구조가 있다면?
+      \begin{itemize}
+        \item 필요한 게 정렬성이라면 힙이나 map을 쓸 수 있고
+        \item 거기에 multiset / multimap도 사용할 수 있고
+      \end{itemize}
+      \item String 문제에서는 Stack이나 Queue에 각 문자를 넣으면 새로운 게 보일 수 있다. (ex : Functioncup 2019 Hiccup)
       \item 단조함수이며, 충분히 빠르게 검증가능한가 : Binary Search.
       \item 특히 ``가능한 최대의 $x$" $\to$ Binary Search.
       \item 차원이 높은 문제 : 차원 내려서 생각하기. 3 $\rightarrow$ 2.
@@ -354,11 +359,13 @@
       \item 이 문제에 Overlapping Subproblem이 보이나? \\$\rightarrow$ Dynamic Programming 을 적용.
       \item 답의 상한이 Reasonable 하게 작은가?
       \item 그래프 문제에서, 어떤 ``조건" 이 들어갔을 때 $\to$ 이 문제를 ``정점을 늘림으로써" 단순한 그래프 문제로 바꿀 수 있나? (ex : SNUPC 2018 달빛 여우) 이를테면, 홀짝성에 따라 점을 2배로 늘림으로써?
-      \item DP도 마찬가지. 어떤 조건을 단순화하기 위해 상태의 수를 사이사이에 집어넣을 수 있나?
-      \item Square root Decomposition : $O(n \log n)$ 이 생각나면 좋을 것 같지만 잘 생각나지 않고, 제한을 보니 $O(n \sqrt{n})$ 이면 될것도 같이 생겼을 때 생각해 보기.
+      \item DP도 마찬가지. 어떤 조건을 단순화하기 위해 상태의 수를 사이사이에 집어넣을 수 있나? (ex : SNUPC 2018 실버런)
+      \item Square root Decomposition : $O(n \log n)$ 이 생각나면 좋을 것 같지만 잘 생각나지 않고, 제한을 보니 $O(n \sqrt{n})$ 이면 될것도 같이 생겼을 때 생각해 보기. $O(\sqrt{n})$ 버킷 테크닉.
+      \item 복잡도가 맞는데 왜인지 안 뚫리면 : 필요없는 long long을 사용하지 않았나? map이나 set iterator들을 보면서 상수 커팅. 간단한 함수들을 inlining. 재귀를 반복문으로.
       \item 마지막 생각 : 조금 추하지만 해싱이나 Random, \texttt{bitset} 을 이용한 $n^2 / 64$ 같은걸로 뚫을 수 있나?
     \end{itemize}
 \newpage
+\begin{comment}
 \section*{업데이트 노트 / To-Do}
 \textbf{이 페이지는 실제 인쇄 팀노트에 포함되지 않습니다}
 \begin{itemize}
@@ -371,7 +378,8 @@
   \item To-do : HLD 코드 넣기.
   \item To-do : Centroid Decomposition
   \item To-do : Trie 구현체 두가지 방식 넣기.
-\columnbreak
 \end{itemize}
+\columnbreak
+\end{comment}
 \end{multicols}
 \end{document}
