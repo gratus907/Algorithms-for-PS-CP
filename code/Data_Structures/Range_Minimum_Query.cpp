@@ -30,4 +30,15 @@ struct Range_Minimum_Tree
         return min(minq(l,r,node*2,nodeleft,mid),
         minq(l,r,node*2+1,mid+1,noderight));
     }
+
+    ll update(ll pos, ll val, ll node, ll l, ll r)
+	{
+		if (r < pos || pos < l)
+			return segtree[node];
+		if (l == r)
+			return segtree[node] = val;
+		ll mid = (l+r)/2;
+		return segtree[node] = min(update(pos, val, node * 2, l, mid),
+        update(pos, val, node * 2 + 1, mid + 1, r));
+	}
 };
